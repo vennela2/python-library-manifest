@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: app-service
-          image: saivennelakota/app-library:appimagev1
+          image: saivennelakota/library-application:appimage
           ports:
             - containerPort: 5000
           resources:

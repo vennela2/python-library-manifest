@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: db
-          image: saivennelakota/app-library:dbimage
+          image: saivennelakota/library-application:dbimage
           ports:
             - containerPort: 3306
           resources:

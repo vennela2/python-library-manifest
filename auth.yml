@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: auth-service
-          image: shaikmustafa/flm2026:authimage
+          image: saivennelakota/app-library:authimage
           ports:
             - containerPort: 5001
           resources:

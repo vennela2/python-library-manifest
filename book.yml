@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: book-service
-          image: shaikmustafa/flm2026:bookimage
+          image: saivennelakota/app-library:bookimage
           ports:
             - containerPort: 5002
           resources:

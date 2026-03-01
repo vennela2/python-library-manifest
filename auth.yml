@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: auth-service
-          image: saivennelakota/app-library:authimage
+          image: saivennelakota/library-application:authimage
           ports:
             - containerPort: 5001
           resources:

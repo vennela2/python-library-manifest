@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: app-service
-          image: shaikmustafa/flm2026:appimagev1
+          image: saivennelakota/app-library:appimagev1
           ports:
             - containerPort: 5000

@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: book-service
-          image: saivennelakota/app-library:bookimage
+          image: saivennelakota/library-application:bookimage
           ports:
             - containerPort: 5002
           resources:

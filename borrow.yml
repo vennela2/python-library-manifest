@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: borrow-service
-          image: saivennelakota/app-library:borrowimage
+          image: saivennelakota/library-application:borrowimage
           ports:
             - containerPort: 5003
           env:

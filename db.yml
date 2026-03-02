@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: db
-          image: saivennelakota/library-application:dbimage
+          image: mysql:5.7
           ports:
             - containerPort: 3306
 

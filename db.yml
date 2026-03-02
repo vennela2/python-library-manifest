@@ -4,7 +4,7 @@ metadata:
   name: db
   namespace: flm
 spec:
-  serviceName: db   # ⭐ REQUIRED for StatefulSet
+  serviceName: db
   replicas: 1
 
   selector:
@@ -32,14 +32,16 @@ spec:
               memory: 256Mi
 
           volumeMounts:
-            - name: db-storage      # ⭐ must match below
+            - name: db-storage
               mountPath: /var/lib/mysql
+              subPath: mysql
 
   volumeClaimTemplates:
     - metadata:
-        name: db-storage           # ⭐ must match above
+        name: db-storage
       spec:
-        accessModes: ["ReadWriteOnce"]
+        accessModes:
+          - ReadWriteOnce
         resources:
           requests:
             storage: 1Gi

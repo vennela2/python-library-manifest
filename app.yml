@@ -18,6 +18,11 @@ spec:
           image: saivennelakota/library-application:appimage-v2
           ports:
             - containerPort: 5000
+          envFrom:
+            - configMapRef:
+                name: library-app-config
+            - secretRef:
+                name: library-app-secret
           resources:
             requests:
               cpu: 100m

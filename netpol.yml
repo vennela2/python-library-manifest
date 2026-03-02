@@ -10,7 +10,6 @@ spec:
   policyTypes:
     - Ingress
     - Egress
-
   ingress:
     - from:
         - namespaceSelector:
@@ -22,7 +21,6 @@ spec:
       ports:
         - protocol: TCP
           port: 5000
-
   egress:
     - to:
         - podSelector:
@@ -33,7 +31,32 @@ spec:
           port: 3306
 
     - to:
-        - namespaceSelector: {}
+        - podSelector:
+            matchLabels:
+              app: auth-service
+      ports:
+        - protocol: TCP
+          port: 5001
+
+    - to:
+        - podSelector:
+            matchLabels:
+              app: book-service
+      ports:
+        - protocol: TCP
+          port: 5002
+
+    - to:
+        - podSelector:
+            matchLabels:
+              app: borrow-service
+      ports:
+        - protocol: TCP
+          port: 5003
+    - to:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: kube-system
       ports:
         - protocol: UDP
           port: 53

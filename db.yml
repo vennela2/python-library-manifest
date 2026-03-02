@@ -22,6 +22,11 @@ spec:
           image: shaikmustafa/flm2026:dbimage
           ports:
             - containerPort: 3306
+          envFrom:
+            - configMapRef:
+                name: library-app-config
+            - secretRef:
+                name: library-app-secret
 
           resources:
             requests:
